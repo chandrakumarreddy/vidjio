@@ -28,7 +28,7 @@ app.post('/ideas', (req, res) => {
 });
 
 //listening to ports
-app.listen(port || 3000, (err) => {
+app.listen(process.env.PORT || 3000, (err) => {
     if (err) {
         console.log('error');
     } else {
