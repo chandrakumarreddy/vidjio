@@ -3,12 +3,12 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
-
+const db = require('./config/database');
 //creating instances
 const app = express();
 //connecting to mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/vidjio', {
+mongoose.connect(db.mongouri, {
     useMongoClient: true
 }).then(() => console.log('database connected')).catch(err => console.log('conection failed'));
 //database model 
