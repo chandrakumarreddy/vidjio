@@ -1,9 +1,5 @@
-if (process.env.Node_ENV == 'production') {
-    module.exports = {
-        mongouri: ' mongodb: /chandra:chandra@123@ds227525.mlab.com:27525/newsletter'
-    }
+if (process.env.NODE_ENV === 'production') {
+    module.exports = { mongoURI: 'mongodb://CHANGEME' }
 } else {
-    module.exports = {
-        mongouri: 'mongodb://localhost/vidjio'
-    }
+    module.exports = { mongoURI: 'mongodb://localhost/vidjot-dev' }
 }

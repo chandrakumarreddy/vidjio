@@ -8,7 +8,7 @@ const db = require('./config/database');
 const app = express();
 //connecting to mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect(db.mongouri, {
+mongoose.connect(db.mongoURI, {
     useMongoClient: true
 }).then(() => console.log('database connected')).catch(err => console.log('conection failed'));
 //database model 
